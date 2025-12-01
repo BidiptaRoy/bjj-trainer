@@ -9,6 +9,27 @@ const bjjData = {
     icon: "🥋",
     moveCount: 5,
     quizCount: 2,
+    quizzes: [
+      {
+        id: 'chokes-quiz-1',
+        question: 'Which submission compresses the carotid arteries from back control?',
+        options: ['Rear Naked Choke', 'Guillotine', 'Armbar', 'Kimura'],
+        correctAnswer: 'Rear Naked Choke',
+        explanation: 'The RNC is applied from back control and targets the carotid arteries on both sides of the neck.'
+      },
+      {
+        id: 'chokes-quiz-2',
+        question: 'What is the key detail for finishing a guillotine choke?',
+        options: [
+          'Pull their head down hard',
+          'Get wrist deep across throat and lift elbow',
+          'Use both hands to squeeze the neck',
+          'Keep their head high'
+        ],
+        correctAnswer: 'Get wrist deep across throat and lift elbow',
+        explanation: 'The guillotine requires deep wrist placement and lifting the choking elbow to create proper pressure.'
+      }
+    ],
     moves: [
       {
         id: 'rnc',
@@ -70,6 +91,22 @@ const bjjData = {
     icon: "💪",
     moveCount: 4,
     quizCount: 2,
+    quizzes: [
+      {
+        id: 'armlocks-quiz-1',
+        question: 'Which joint does an armbar attack?',
+        options: ['Shoulder', 'Elbow', 'Wrist', 'Neck'],
+        correctAnswer: 'Elbow',
+        explanation: 'The armbar hyperextends the elbow joint by pulling the wrist while pushing the hips up.'
+      },
+      {
+        id: 'armlocks-quiz-2',
+        question: 'What grip configuration is used for a Kimura?',
+        options: ['Gable grip', 'Figure-four grip', 'S-grip', 'No grip needed'],
+        correctAnswer: 'Figure-four grip',
+        explanation: 'The Kimura uses a figure-four grip where you grab your own wrist after threading under their elbow.'
+      }
+    ],
     moves: [
       {
         id: 'armbar',
@@ -131,6 +168,27 @@ const bjjData = {
     icon: "🦵",
     moveCount: 3,
     quizCount: 2,
+    quizzes: [
+      {
+        id: 'leglocks-quiz-1',
+        question: 'Which leg lock is considered safest for beginners?',
+        options: ['Heel Hook', 'Straight Ankle Lock', 'Toe Hold', 'Knee Bar'],
+        correctAnswer: 'Straight Ankle Lock',
+        explanation: 'The straight ankle lock comes on gradually and is the safest leg lock for beginners to practice.'
+      },
+      {
+        id: 'leglocks-quiz-2',
+        question: 'What should you do when caught in a leg lock?',
+        options: [
+          'Try to roll out immediately',
+          'Tap early before feeling pain',
+          'Wait to see how bad it gets',
+          'Pull your leg out quickly'
+        ],
+        correctAnswer: 'Tap early before feeling pain',
+        explanation: 'Leg locks can cause serious injury quickly. Always tap early, especially with heel hooks and knee bars.'
+      }
+    ],
     moves: [
       {
         id: 'straightAnkleLock',
@@ -159,6 +217,275 @@ const bjjData = {
         safety: 'Ankle locks come on slowly. Still tap when you feel pressure.'
       }
     ]
+  },
+  guardPasses: {
+    title: "Guard Passes",
+    description: "Techniques to pass the guard and advance position",
+    icon: "🛡️",
+    moveCount: 3,
+    quizCount: 2,
+    quizzes: [
+      {
+        id: 'guardpasses-quiz-1',
+        question: 'What is the primary goal of a guard pass?',
+        options: [
+          'Submit your opponent',
+          'Advance to a dominant position like side control or mount',
+          'Escape back to standing',
+          'Control their legs'
+        ],
+        correctAnswer: 'Advance to a dominant position like side control or mount',
+        explanation: 'Guard passing is about moving past the legs to reach dominant positions where you can control and attack.'
+      },
+      {
+        id: 'guardpasses-quiz-2',
+        question: 'When passing guard, what should you avoid?',
+        options: [
+          'Keeping your weight forward',
+          'Controlling their hips',
+          'Staying in their closed guard too long',
+          'Moving to side control'
+        ],
+        correctAnswer: 'Staying in their closed guard too long',
+        explanation: 'Staying static in closed guard allows your opponent to set up attacks. Keep moving and working to open and pass.'
+      }
+    ],
+    moves: [
+      {
+        id: 'toreandoPass',
+        name: 'Toreando Pass',
+        tagline: 'Bullfighter pass',
+        category: 'Open Guard Pass',
+        level: 'Intermediate',
+        overview: 'The toreando or bullfighter pass involves controlling both pant legs and swinging them to one side while moving to the opposite side to pass.',
+        steps: [
+          'Grip both pant legs at the knees',
+          'Stand up with good posture',
+          'Swing their legs to one side',
+          'Circle around to the opposite side',
+          'Drop weight and secure side control'
+        ],
+        keyCues: [
+          'Keep their legs together when swinging',
+          'Move quickly to prevent recovery',
+          'Stay on your toes for mobility'
+        ],
+        mistakes: [
+          'Not controlling both legs',
+          'Moving too slowly',
+          'Letting them recover guard'
+        ],
+        safety: 'This is a positional technique with minimal injury risk.'
+      },
+      {
+        id: 'kneeSlice',
+        name: 'Knee Slice Pass',
+        tagline: 'Cut through the guard',
+        category: 'Pressure Pass',
+        level: 'Beginner',
+        overview: 'The knee slice pass involves driving your knee across their legs while maintaining upper body control to cut through their guard.',
+        steps: [
+          'Control their far arm and collar',
+          'Drive knee across their thigh',
+          'Pin their bottom leg with your shin',
+          'Slide knee across to far side',
+          'Drop weight into side control'
+        ],
+        keyCues: [
+          'Keep chest heavy on them',
+          'Drive knee low across thigh',
+          'Control their upper body throughout'
+        ],
+        mistakes: [
+          'Not pinning their bottom leg',
+          'Leaving too much space',
+          'Poor upper body control'
+        ],
+        safety: 'Apply pressure gradually to avoid knee on belly injuries.'
+      }
+    ]
+  },
+  sweeps: {
+    title: "Sweeps",
+    description: "Reversals from guard to top position",
+    icon: "🔄",
+    moveCount: 2,
+    quizCount: 2,
+    quizzes: [
+      {
+        id: 'sweeps-quiz-1',
+        question: 'What is the main purpose of a sweep?',
+        options: [
+          'Submit your opponent',
+          'Escape to standing',
+          'Reverse position from bottom to top',
+          'Defend against passes'
+        ],
+        correctAnswer: 'Reverse position from bottom to top',
+        explanation: 'Sweeps are techniques used from guard to reverse the position and end up on top in a dominant position.'
+      },
+      {
+        id: 'sweeps-quiz-2',
+        question: 'What do most sweeps require?',
+        options: [
+          'Superior strength',
+          'Breaking opponent\'s base and posture',
+          'A gi to grip',
+          'Flexible legs'
+        ],
+        correctAnswer: 'Breaking opponent\'s base and posture',
+        explanation: 'Effective sweeps require disrupting your opponent\'s balance and base, not just strength.'
+      }
+    ],
+    moves: [
+      {
+        id: 'scissorSweep',
+        name: 'Scissor Sweep',
+        tagline: 'Classic guard sweep',
+        category: 'Closed Guard',
+        level: 'Beginner',
+        overview: 'The scissor sweep uses a scissoring motion with your legs while pulling your opponent forward to sweep them over.',
+        steps: [
+          'From closed guard, break their posture down',
+          'Open guard and get an underhook',
+          'Place top leg across their chest',
+          'Place bottom leg behind their knee',
+          'Scissor legs while pulling them forward',
+          'Come up on top in mount or side control'
+        ],
+        keyCues: [
+          'Break their posture first',
+          'Top leg pushes, bottom leg pulls',
+          'Pull with your arms as you scissor'
+        ],
+        mistakes: [
+          'Not breaking posture first',
+          'Weak scissor motion',
+          'Not coming up with the sweep'
+        ],
+        safety: 'Control the sweep to avoid slamming your partner.'
+      },
+      {
+        id: 'butterflyHook',
+        name: 'Butterfly Hook Sweep',
+        tagline: 'Elevate and sweep',
+        category: 'Butterfly Guard',
+        level: 'Intermediate',
+        overview: 'From butterfly guard, use your hook to elevate your opponent while pulling them in the direction of the sweep.',
+        steps: [
+          'Sit up in butterfly guard with hooks in',
+          'Get underhooks or collar grips',
+          'Pull them forward, breaking posture',
+          'Lift with your hook on one side',
+          'Drive your shoulder into them',
+          'Roll them over to the side'
+        ],
+        keyCues: [
+          'Stay chest to chest',
+          'Lift with your leg, drive with your shoulder',
+          'Follow them over to maintain top position'
+        ],
+        mistakes: [
+          'Leaning back instead of forward',
+          'Not elevating with the hook',
+          'Poor timing'
+        ],
+        safety: 'Control the sweep to avoid partner landing awkwardly.'
+      }
+    ]
+  },
+  wrestling: {
+    title: "Wrestling",
+    description: "Takedowns including single leg and double leg",
+    icon: "🤼",
+    moveCount: 2,
+    quizCount: 2,
+    quizzes: [
+      {
+        id: 'wrestling-quiz-1',
+        question: 'What is the most important aspect of a successful takedown?',
+        options: [
+          'Pure strength',
+          'Speed only',
+          'Level change and penetration step',
+          'Jumping at opponent'
+        ],
+        correctAnswer: 'Level change and penetration step',
+        explanation: 'Good takedowns require proper level change and penetration step to close distance and off-balance your opponent.'
+      },
+      {
+        id: 'wrestling-quiz-2',
+        question: 'In wrestling, what does "changing levels" mean?',
+        options: [
+          'Switching between different techniques',
+          'Dropping your hips lower to shoot',
+          'Standing on your toes',
+          'Lifting your opponent'
+        ],
+        correctAnswer: 'Dropping your hips lower to shoot',
+        explanation: 'Changing levels means dropping your hips and lowering your body to shoot in for a takedown effectively.'
+      }
+    ],
+    moves: [
+      {
+        id: 'singleLeg',
+        name: 'Single Leg Takedown',
+        tagline: 'Classic wrestling takedown',
+        category: 'Takedown',
+        level: 'Beginner',
+        overview: 'The single leg takedown involves shooting in to grab one leg, then driving through or lifting to take your opponent down.',
+        steps: [
+          'Set up with hand fighting or feints',
+          'Change levels by dropping your hips',
+          'Step in deep with penetration step',
+          'Grab behind their knee with both arms',
+          'Drive forward or lift to finish',
+          'Come up on top'
+        ],
+        keyCues: [
+          'Level change before shooting',
+          'Penetration step gets you deep',
+          'Head on the outside, tight to their body',
+          'Drive through them, not just pulling'
+        ],
+        mistakes: [
+          'No level change before shooting',
+          'Shallow penetration step',
+          'Head on wrong side',
+          'Only pulling instead of driving'
+        ],
+        safety: 'Control the finish to avoid knee injuries to your partner.'
+      },
+      {
+        id: 'doubleLeg',
+        name: 'Double Leg Takedown',
+        tagline: 'Powerful wrestling staple',
+        category: 'Takedown',
+        level: 'Beginner',
+        overview: 'The double leg takedown involves shooting in low, grabbing both legs, and driving through to take your opponent to the mat.',
+        steps: [
+          'Set up with movement or feints',
+          'Drop level and shoot in',
+          'Wrap both arms around both legs',
+          'Head tight to their chest or side',
+          'Drive forward through them',
+          'Lift or drive them to the mat'
+        ],
+        keyCues: [
+          'Shoot low and fast',
+          'Keep your back straight',
+          'Drive with your legs',
+          'Head position protects your neck'
+        ],
+        mistakes: [
+          'Shooting from too far away',
+          'Rounded back position',
+          'Not driving through',
+          'Poor head position'
+        ],
+        safety: 'Be careful with explosive movements and control the landing to protect both athletes.'
+      }
+    ]
   }
 };
 
@@ -169,6 +496,7 @@ function App() {
   const [userName, setUserName] = useState('');
   const [showNamePrompt, setShowNamePrompt] = useState(false);
   const [mode, setMode] = useState('learn');
+  const [quizSection, setQuizSection] = useState(null);
 
   useEffect(() => {
     const saved = localStorage.getItem('bjjUserName');
@@ -190,6 +518,11 @@ function App() {
     setUserName(name);
     localStorage.setItem('bjjUserName', name);
     setShowNamePrompt(false);
+  };
+
+  const startQuiz = (sectionKey) => {
+    setQuizSection(sectionKey);
+    setCurrentPage('quiz');
   };
 
   return (
@@ -221,6 +554,7 @@ function App() {
             setCurrentSection={setCurrentSection}
             mode={mode}
             setMode={setMode}
+            startQuiz={startQuiz}
           />
         )}
         
@@ -229,12 +563,23 @@ function App() {
             section={bjjData[currentSection]}
             setCurrentPage={setCurrentPage}
             setCurrentMove={setCurrentMove}
+            startQuiz={() => startQuiz(currentSection)}
           />
         )}
 
         {currentPage === 'move' && (
           <MoveDetailPage 
             move={currentMove}
+            setCurrentPage={setCurrentPage}
+            userName={userName}
+            promptForName={promptForName}
+          />
+        )}
+
+        {currentPage === 'quiz' && (
+          <QuizPage
+            section={bjjData[quizSection]}
+            sectionKey={quizSection}
             setCurrentPage={setCurrentPage}
             userName={userName}
             promptForName={promptForName}
@@ -279,12 +624,24 @@ function NamePromptModal({ onSubmit }) {
   );
 }
 
-function HomePage({ setCurrentPage, setCurrentSection, mode, setMode }) {
+function HomePage({ setCurrentPage, setCurrentSection, mode, setMode, startQuiz }) {
   const sections = [
     { key: 'chokes', ...bjjData.chokes },
     { key: 'armLocks', ...bjjData.armLocks },
     { key: 'legLocks', ...bjjData.legLocks },
+    { key: 'guardPasses', ...bjjData.guardPasses },
+    { key: 'sweeps', ...bjjData.sweeps },
+    { key: 'wrestling', ...bjjData.wrestling },
   ];
+
+  const handleSectionClick = (sectionKey) => {
+    if (mode === 'quiz') {
+      startQuiz(sectionKey);
+    } else {
+      setCurrentSection(sectionKey);
+      setCurrentPage('section');
+    }
+  };
 
   return (
     <div>
@@ -322,11 +679,9 @@ function HomePage({ setCurrentPage, setCurrentSection, mode, setMode }) {
         {sections.map((section) => (
           <SectionCard 
             key={section.key} 
-            section={section} 
-            onClick={() => {
-              setCurrentSection(section.key);
-              setCurrentPage('section');
-            }}
+            section={section}
+            mode={mode}
+            onClick={() => handleSectionClick(section.key)}
           />
         ))}
       </div>
@@ -334,7 +689,7 @@ function HomePage({ setCurrentPage, setCurrentSection, mode, setMode }) {
   );
 }
 
-function SectionCard({ section, onClick }) {
+function SectionCard({ section, onClick, mode }) {
   return (
     <div
       onClick={onClick}
@@ -346,7 +701,12 @@ function SectionCard({ section, onClick }) {
       </h3>
       <p className="text-gray-400 mb-4">{section.description}</p>
       <div className="flex items-center justify-between text-sm text-gray-500">
-        <span>{section.moveCount} moves • {section.quizCount} quizzes</span>
+        <span>
+          {mode === 'quiz' 
+            ? `${section.quizCount} quizzes` 
+            : `${section.moveCount} moves • ${section.quizCount} quizzes`
+          }
+        </span>
         <ChevronRight className="group-hover:text-green-400 group-hover:translate-x-1 transition" />
       </div>
       <div className="mt-4 h-2 bg-gray-700 rounded-full overflow-hidden">
@@ -356,7 +716,7 @@ function SectionCard({ section, onClick }) {
   );
 }
 
-function SectionPage({ section, setCurrentPage, setCurrentMove }) {
+function SectionPage({ section, setCurrentPage, setCurrentMove, startQuiz }) {
   return (
     <div>
       <button
@@ -367,9 +727,18 @@ function SectionPage({ section, setCurrentPage, setCurrentMove }) {
         Back to Home
       </button>
 
-      <div className="mb-8">
-        <h2 className="text-4xl font-bold mb-2">{section.title}</h2>
-        <p className="text-gray-400 text-lg">{section.description}</p>
+      <div className="mb-8 flex justify-between items-start">
+        <div>
+          <h2 className="text-4xl font-bold mb-2">{section.title}</h2>
+          <p className="text-gray-400 text-lg">{section.description}</p>
+        </div>
+        <button
+          onClick={startQuiz}
+          className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition flex items-center gap-2"
+        >
+          <Brain size={20} />
+          Start Quiz
+        </button>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
@@ -578,6 +947,262 @@ function MoveDetailPage({ move, setCurrentPage, userName, promptForName }) {
             ))
           )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function QuizPage({ section, sectionKey, setCurrentPage, userName, promptForName }) {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [score, setScore] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [hasAnswered, setHasAnswered] = useState(false);
+  const [quizComplete, setQuizComplete] = useState(false);
+  const [results, setResults] = useState({});
+  const [isLoadingResults, setIsLoadingResults] = useState(false);
+
+  const currentQuestion = section.quizzes[currentQuestionIndex];
+
+  useEffect(() => {
+    loadResults();
+  }, [currentQuestion]);
+
+  const loadResults = async () => {
+    setIsLoadingResults(true);
+    try {
+      const response = await fetch(`http://localhost:3000/api/quiz/${sectionKey}/results/${currentQuestion.id}`);
+      const data = await response.json();
+      setResults(data);
+    } catch (error) {
+      console.error('Error loading results:', error);
+      setResults({});
+    }
+    setIsLoadingResults(false);
+  };
+
+  const handleAnswerSelect = async (answer) => {
+    if (hasAnswered) return;
+
+    if (!userName) {
+      promptForName(() => submitAnswer(answer));
+      return;
+    }
+
+    await submitAnswer(answer);
+  };
+
+  const submitAnswer = async (answer) => {
+    setSelectedAnswer(answer);
+    setHasAnswered(true);
+
+    if (answer === currentQuestion.correctAnswer) {
+      setScore(score + 1);
+    }
+
+    try {
+      await fetch('http://localhost:3000/api/quiz/answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          quizId: sectionKey,
+          questionId: currentQuestion.id,
+          userName: userName,
+          answer: answer
+        })
+      });
+      
+      await loadResults();
+    } catch (error) {
+      console.error('Error submitting answer:', error);
+    }
+  };
+
+  const handleNextQuestion = () => {
+    if (currentQuestionIndex < section.quizzes.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedAnswer(null);
+      setHasAnswered(false);
+    } else {
+      setQuizComplete(true);
+    }
+  };
+
+  const handleRetakeQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setSelectedAnswer(null);
+    setHasAnswered(false);
+    setQuizComplete(false);
+  };
+
+  if (quizComplete) {
+    const percentage = Math.round((score / section.quizzes.length) * 100);
+    
+    return (
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-gray-800 border border-gray-700 rounded-lg p-8 text-center">
+          <div className="text-6xl mb-4">
+            {percentage >= 80 ? '🏆' : percentage >= 60 ? '👍' : '📚'}
+          </div>
+          <h2 className="text-4xl font-bold mb-4">Quiz Complete!</h2>
+          <div className="text-5xl font-bold text-green-400 mb-2">
+            {score}/{section.quizzes.length}
+          </div>
+          <p className="text-2xl text-gray-400 mb-8">{percentage}% Correct</p>
+          
+          {percentage < 60 && (
+            <p className="text-gray-300 mb-8">
+              Keep training! Review the moves and try again.
+            </p>
+          )}
+          {percentage >= 60 && percentage < 80 && (
+            <p className="text-gray-300 mb-8">
+              Good job! You're on the right track.
+            </p>
+          )}
+          {percentage >= 80 && (
+            <p className="text-gray-300 mb-8">
+              Excellent work! You've mastered this section!
+            </p>
+          )}
+
+          <div className="flex gap-4 justify-center">
+            <button
+              onClick={handleRetakeQuiz}
+              className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition"
+            >
+              Retake Quiz
+            </button>
+            <button
+              onClick={() => setCurrentPage('home')}
+              className="px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-bold rounded-lg transition"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-3xl mx-auto">
+      <button
+        onClick={() => setCurrentPage('home')}
+        className="mb-6 text-gray-400 hover:text-green-400 transition flex items-center gap-2"
+      >
+        <ChevronRight className="rotate-180" size={20} />
+        Back to Home
+      </button>
+
+      <div className="bg-gray-800 border border-gray-700 rounded-lg p-8">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-3xl font-bold">{section.title} Quiz</h2>
+          <div className="text-lg">
+            <span className="text-gray-400">Question </span>
+            <span className="text-green-400 font-bold">
+              {currentQuestionIndex + 1}/{section.quizzes.length}
+            </span>
+            <span className="text-gray-400 ml-4">Score: </span>
+            <span className="text-green-400 font-bold">
+              {score}/{currentQuestionIndex + (hasAnswered ? 1 : 0)}
+            </span>
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-2xl mb-6">{currentQuestion.question}</h3>
+          
+          <div className="space-y-4">
+            {currentQuestion.options.map((option, index) => {
+              const isSelected = selectedAnswer === option;
+              const isCorrect = option === currentQuestion.correctAnswer;
+              const showResult = hasAnswered;
+              
+              let buttonClass = "w-full p-4 text-left rounded-lg border-2 transition font-medium ";
+              
+              if (!showResult) {
+                buttonClass += "border-gray-600 hover:border-green-400 hover:bg-gray-700";
+              } else if (isCorrect) {
+                buttonClass += "border-green-500 bg-green-500/20 text-green-400";
+              } else if (isSelected && !isCorrect) {
+                buttonClass += "border-red-500 bg-red-500/20 text-red-400";
+              } else {
+                buttonClass += "border-gray-600 opacity-50";
+              }
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleAnswerSelect(option)}
+                  disabled={hasAnswered}
+                  className={buttonClass}
+                >
+                  <div className="flex justify-between items-center">
+                    <span>{option}</span>
+                    {showResult && isCorrect && <span className="text-xl">✓</span>}
+                    {showResult && isSelected && !isCorrect && <span className="text-xl">✗</span>}
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {hasAnswered && (
+          <div className="mb-6">
+            <div className={`p-4 rounded-lg border-l-4 ${
+              selectedAnswer === currentQuestion.correctAnswer 
+                ? 'bg-green-500/20 border-green-500' 
+                : 'bg-red-500/20 border-red-500'
+            }`}>
+              <p className="font-bold mb-2">
+                {selectedAnswer === currentQuestion.correctAnswer ? '✓ Correct!' : '✗ Incorrect'}
+              </p>
+              <p className="text-gray-300">{currentQuestion.explanation}</p>
+            </div>
+
+            {!isLoadingResults && Object.keys(results).length > 0 && (
+              <div className="mt-6 bg-gray-900 p-4 rounded-lg">
+                <h4 className="font-bold mb-3 text-green-400">Live Results:</h4>
+                {currentQuestion.options.map((option) => {
+                  const voters = results[option] || [];
+                  const total = Object.values(results).flat().length;
+                  const percentage = total > 0 ? Math.round((voters.length / total) * 100) : 0;
+                  
+                  return (
+                    <div key={option} className="mb-3">
+                      <div className="flex justify-between text-sm mb-1">
+                        <span>{option}</span>
+                        <span className="text-gray-400">{percentage}% ({voters.length})</span>
+                      </div>
+                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-blue-500 transition-all duration-500"
+                          style={{ width: `${percentage}%` }}
+                        ></div>
+                      </div>
+                      {voters.length > 0 && (
+                        <div className="text-xs text-gray-500 mt-1">
+                          {voters.join(', ')}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {hasAnswered && (
+          <button
+            onClick={handleNextQuestion}
+            className="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-lg transition"
+          >
+            {currentQuestionIndex < section.quizzes.length - 1 ? 'Next Question' : 'Finish Quiz'}
+          </button>
+        )}
       </div>
     </div>
   );
