@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Award, BookOpen, Brain, Menu, X } from 'lucide-react';
 
+const API = import.meta.env.VITE_API_BASE_URL;
+
 // BJJ Data Structure - All Sections
 const bjjData = {
   chokes: {
