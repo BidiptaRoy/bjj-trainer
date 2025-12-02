@@ -790,18 +790,22 @@ function MoveDetailPage({ move, setCurrentPage, userName, promptForName }) {
   }, [move.id]);
 
   const loadComments = async () => {
-    setIsLoadingComments(true);
-    try {
-      const data = await fetch(`http://localhost:3000/api/comments/${move.id}`)
-        .then(r => r.json())
-        .catch(() => []);
-      setComments(data);
-    } catch (error) {
-      console.error('Error loading comments:', error);
+  setIsLoadingComments(true);
+  try {
+    const response = await fetch(`http://localhost:3000/api/comments/${move.id}`);
+    if (response.ok) {
+      const data = await response.json();
+      setComments(Array.isArray(data) ? data : []);
+    } else {
+      console.error('Failed to load comments');
       setComments([]);
     }
-    setIsLoadingComments(false);
-  };
+  } catch (error) {
+    console.error('Error loading comments:', error);
+    setComments([]);
+  }
+  setIsLoadingComments(false);
+};
 
   const handleCommentSubmit = async () => {
     if (!newComment.trim()) return;
