@@ -972,7 +972,7 @@ function MoveDetailPage({ move, setCurrentPage, userName, promptForName }) {
   const loadComments = async () => {
     setIsLoadingComments(true);
     try {
-      const data = await fetch(`http://localhost:3000/api/comments/${move.id}`)
+      const data = await fetch(`${API}/api/comments/${move.id}`)
         .then(r => r.json())
         .catch(() => []);
       setComments(data);
@@ -996,7 +996,7 @@ function MoveDetailPage({ move, setCurrentPage, userName, promptForName }) {
 
   const submitComment = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/comments', {
+      const response = await fetch(`${API}/api/comments`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -1150,7 +1150,7 @@ function QuizPage({ section, sectionKey, setCurrentPage, userName, promptForName
   const loadResults = async () => {
     setIsLoadingResults(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/quiz/${sectionKey}/results/${currentQuestion.id}`);
+      const response = await fetch(`${API}/api/quiz/${sectionKey}/results/${currentQuestion.id}`);
       const data = await response.json();
       setResults(data);
     } catch (error) {
@@ -1180,7 +1180,7 @@ function QuizPage({ section, sectionKey, setCurrentPage, userName, promptForName
     }
 
     try {
-      await fetch('http://localhost:3000/api/quiz/answer', {
+      await fetch(`${API}/api/quiz/answer`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
