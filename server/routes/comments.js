@@ -9,6 +9,7 @@ router.get('/:pageId', async (req, res) => {
       .sort({ timestamp: -1 });
     res.json(comments);
   } catch (error) {
+    console.error('Error fetching comments:', error);
     res.status(500).json({ error: error.message });
   }
 });
@@ -17,6 +18,10 @@ router.get('/:pageId', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const { pageId, userName, text } = req.body;
+    
+    if (!pageId || !userName || !text) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
     
     const comment = new Comment({
       pageId,
@@ -27,6 +32,7 @@ router.post('/', async (req, res) => {
     await comment.save();
     res.status(201).json(comment);
   } catch (error) {
+    console.error('Error saving comment:', error);
     res.status(500).json({ error: error.message });
   }
 });
