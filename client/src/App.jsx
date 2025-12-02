@@ -7,7 +7,7 @@ const bjjData = {
     title: "Chokes",
     description: "Front headlock, rear chokes, triangles, and more",
     icon: "🥋",
-    moveCount: 5,
+    moveCount: 6,
     quizCount: 2,
     quizzes: [
       {
@@ -82,6 +82,35 @@ const bjjData = {
           'Wrong grip configuration'
         ],
         safety: 'Can cause neck discomfort. Tap early if you feel pressure.'
+      },
+      {
+        id: 'triangle',
+        name: 'Triangle Choke',
+        tagline: 'Choke with legs from guard',
+        category: 'Guard Choke',
+        level: 'Intermediate',
+        overview: 'The triangle choke traps one arm inside while using your legs to compress the carotid arteries. One leg crosses the back of the neck while the other locks behind your knee.',
+        steps: [
+          'Break their posture from guard',
+          'Create angle to one side',
+          'Throw leg over their shoulder',
+          'Lock triangle with foot behind knee',
+          'Pull head down to chest',
+          'Squeeze knees together'
+        ],
+        keyCues: [
+          'Create angle not straight',
+          'Lock tight with no space',
+          'Pull head down',
+          'Squeeze knees together'
+        ],
+        mistakes: [
+          'Staying too straight',
+          'Loose triangle',
+          'Not pulling head',
+          'Wrong squeeze direction'
+        ],
+        safety: 'Blood choke works fast. Tap early when feeling pressure.'
       }
     ]
   },
@@ -89,7 +118,7 @@ const bjjData = {
     title: "Arm & Shoulder Locks",
     description: "Armbars, kimuras, americanas, and arm triangles",
     icon: "💪",
-    moveCount: 4,
+    moveCount: 6,
     quizCount: 2,
     quizzes: [
       {
@@ -159,6 +188,65 @@ const bjjData = {
           'Not controlling their body with your weight'
         ],
         safety: 'Shoulders can be damaged quickly. Tap early and apply slowly.'
+      },
+      {
+        id: 'americana',
+        name: 'Americana',
+        tagline: 'Keylock shoulder lock',
+        category: 'Shoulder Lock',
+        level: 'Beginner',
+        overview: 'The Americana is a shoulder lock from top positions like side control or mount. The arm is bent at 90 degrees and rotated toward the head.',
+        steps: [
+          'From side control isolate their arm',
+          'Pin their wrist to the mat',
+          'Thread arm under their elbow',
+          'Grab your own wrist',
+          'Lift their elbow while keeping wrist pinned',
+          'Rotate hand toward their head'
+        ],
+        keyCues: [
+          'Keep wrist pinned to mat',
+          'Elbow at 90 degrees',
+          'Lift elbow up not out',
+          'Rotate in arc toward head'
+        ],
+        mistakes: [
+          'Not pinning wrist',
+          'Letting arm straighten',
+          'Rotating too fast',
+          'Poor weight distribution'
+        ],
+        safety: 'Shoulder locks cause serious injury. Apply slowly and tap immediately.'
+      },
+      {
+        id: 'armTriangle',
+        name: 'Arm Triangle',
+        tagline: 'Head and arm choke',
+        category: 'Choke',
+        level: 'Intermediate',
+        overview: 'The arm triangle uses your shoulder and their arm to compress one side of the neck. Finished from side control or mount.',
+        steps: [
+          'Get their arm across their neck',
+          'Drive shoulder into other side',
+          'Lock hands together',
+          'Switch to opposite side',
+          'Walk legs back for angle',
+          'Squeeze shoulder into neck',
+          'Pull head toward you'
+        ],
+        keyCues: [
+          'Arm tight across neck',
+          'Shoulder closes other side',
+          'Create angle',
+          'Squeeze tight'
+        ],
+        mistakes: [
+          'Arm not across properly',
+          'Staying too perpendicular',
+          'Leaving space',
+          'Not angling'
+        ],
+        safety: 'Blood choke. Tap early when feeling pressure.'
       }
     ]
   },
@@ -166,7 +254,7 @@ const bjjData = {
     title: "Leg Locks",
     description: "Heel hooks, ankle locks, and knee bars",
     icon: "🦵",
-    moveCount: 3,
+    moveCount: 5,
     quizCount: 2,
     quizzes: [
       {
@@ -215,6 +303,64 @@ const bjjData = {
           'Using arms only instead of whole body'
         ],
         safety: 'Ankle locks come on slowly. Still tap when you feel pressure.'
+      },
+      {
+        id: 'heelHook',
+        name: 'Heel Hook',
+        tagline: 'Rotational leg attack',
+        category: 'Leg Lock',
+        level: 'Advanced',
+        overview: 'The heel hook is one of the most dangerous leg locks in BJJ. It attacks the knee by controlling the heel and rotating it. This can cause catastrophic knee damage instantly.',
+        steps: [
+          'Enter leg entanglement position',
+          'Cup the heel with both hands',
+          'Trap their leg between yours',
+          'Keep their knee line controlled',
+          'Rotate heel away from their body',
+          'Keep hips tight to their leg'
+        ],
+        keyCues: [
+          'Control the knee line first',
+          'Cup heel like holding a basketball',
+          'Rotation comes from whole body not just arms',
+          'Keep everything tight'
+        ],
+        mistakes: [
+          'Poor knee line control',
+          'Loose leg entanglement',
+          'Using only arms to rotate',
+          'Going too fast'
+        ],
+        safety: 'EXTREMELY DANGEROUS. Can destroy knees instantly. Only practice with experienced partners. Tap immediately at first pressure.'
+      },
+      {
+        id: 'kneeBar',
+        name: 'Knee Bar',
+        tagline: 'Hyperextend the knee',
+        category: 'Leg Lock',
+        level: 'Advanced',
+        overview: 'The knee bar hyperextends the knee joint similar to how an armbar works on the elbow. The leg is isolated and pressure is applied by arching the hips.',
+        steps: [
+          'Isolate one leg',
+          'Fall back with their leg',
+          'Trap leg across your body',
+          'Clamp knees around their thigh',
+          'Control their foot to hip',
+          'Arch hips up to hyperextend knee'
+        ],
+        keyCues: [
+          'Keep foot to hip',
+          'Knees tight around thigh',
+          'Hips drive up not just pulling',
+          'Control the angle'
+        ],
+        mistakes: [
+          'Not controlling the foot',
+          'Loose knee clamp',
+          'Wrong angle',
+          'Letting them turn'
+        ],
+        safety: 'Knee bars can injure quickly. Tap early before feeling pain. Knees are fragile.'
       }
     ]
   },
@@ -398,7 +544,7 @@ const bjjData = {
     title: "Wrestling",
     description: "Takedowns including single leg and double leg",
     icon: "🤼",
-    moveCount: 2,
+    moveCount: 3,
     quizCount: 2,
     quizzes: [
       {
@@ -484,6 +630,38 @@ const bjjData = {
           'Poor head position'
         ],
         safety: 'Be careful with explosive movements and control the landing to protect both athletes.'
+      },
+      {
+        id: 'uchiMata',
+        name: 'Uchi Mata',
+        tagline: 'Inner thigh throw from Judo',
+        category: 'Judo Throw',
+        level: 'Intermediate',
+        overview: 'Uchi Mata is a powerful Judo throw where you lift your opponent using your inner thigh while breaking their balance forward and to the side. It is one of the most popular throws in competition.',
+        steps: [
+          'Establish grip fighting position',
+          'Break their balance forward and to side',
+          'Turn your body in',
+          'Step deep with support leg',
+          'Drive lifting leg into their inner thigh',
+          'Lift and sweep them over',
+          'Follow through with rotation'
+        ],
+        keyCues: [
+          'Break balance before entering',
+          'Deep turn and penetration',
+          'Lifting leg drives up and back',
+          'Keep pulling with grips throughout',
+          'Full hip rotation'
+        ],
+        mistakes: [
+          'Not breaking balance first',
+          'Shallow entry',
+          'Weak leg drive',
+          'Not committing to the throw',
+          'Poor grip control'
+        ],
+        safety: 'High amplitude throw. Practice on mats with proper instruction. Control the finish to prevent injuries.'
       }
     ]
   }
@@ -790,22 +968,18 @@ function MoveDetailPage({ move, setCurrentPage, userName, promptForName }) {
   }, [move.id]);
 
   const loadComments = async () => {
-  setIsLoadingComments(true);
-  try {
-    const response = await fetch(`http://localhost:3000/api/comments/${move.id}`);
-    if (response.ok) {
-      const data = await response.json();
-      setComments(Array.isArray(data) ? data : []);
-    } else {
-      console.error('Failed to load comments');
+    setIsLoadingComments(true);
+    try {
+      const data = await fetch(`http://localhost:3000/api/comments/${move.id}`)
+        .then(r => r.json())
+        .catch(() => []);
+      setComments(data);
+    } catch (error) {
+      console.error('Error loading comments:', error);
       setComments([]);
     }
-  } catch (error) {
-    console.error('Error loading comments:', error);
-    setComments([]);
-  }
-  setIsLoadingComments(false);
-};
+    setIsLoadingComments(false);
+  };
 
   const handleCommentSubmit = async () => {
     if (!newComment.trim()) return;
